@@ -1,0 +1,2 @@
+class TideStation < ApplicationRecord
+end

@@ -1,0 +1,37 @@
+<%= form_with(model: tide_station) do |form| %>
+  <% if tide_station.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(tide_station.errors.count, "error") %> prohibited this tide_station from being saved:</h2>
+
+      <ul>
+        <% tide_station.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :station_name, style: "display: block" %>
+    <%= form.text_field :station_name %>
+  </div>
+
+  <div>
+    <%= form.label :station_number, style: "display: block" %>
+    <%= form.number_field :station_number %>
+  </div>
+
+  <div>
+    <%= form.label :latitude, style: "display: block" %>
+    <%= form.text_field :latitude %>
+  </div>
+
+  <div>
+    <%= form.label :longitude, style: "display: block" %>
+    <%= form.text_field :longitude %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

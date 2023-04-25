@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Tide stations</h1>
+
+<div id="tide_stations">
+  <% @tide_stations.each do |tide_station| %>
+    <%= render tide_station %>
+    <p>
+      <%= link_to "Show this tide station", tide_station %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New tide station", new_tide_station_path %>
