@@ -10,9 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_24_225316) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_25_220035) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "noaa_six_min_tide_by_dates", force: :cascade do |t|
+    t.integer "station_number"
+    t.date "date"
+    t.text "data"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sunrise_sunsets", force: :cascade do |t|
+    t.integer "station_number"
+    t.date "date"
+    t.time "sunrise"
+    t.time "sunset"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "tide_stations", force: :cascade do |t|
     t.string "station_name"

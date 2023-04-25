@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  station_number: 1
+  date: 2023-04-25
+  sunrise: 2023-04-25 15:00:35
+  sunset: 2023-04-25 15:00:35
+
+two:
+  station_number: 1
+  date: 2023-04-25
+  sunrise: 2023-04-25 15:00:35
+  sunset: 2023-04-25 15:00:35

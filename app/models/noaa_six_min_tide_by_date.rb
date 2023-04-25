@@ -1,0 +1,2 @@
+class NoaaSixMinTideByDate < ApplicationRecord
+end
