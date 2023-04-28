@@ -30,6 +30,10 @@ gem "jbuilder"
 
 # Seed using rest-client
 gem "rest-client"
+
+# chart
+gem "chartkick"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 

@@ -28,7 +28,7 @@ def tides_from_noaa
     else
       NoaaSixMinTideByDate.create(
         station_number: station_number,
-        date: date,
+        date: prev_date,
         data: predictions
       )
       predictions = []
