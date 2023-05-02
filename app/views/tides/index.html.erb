@@ -1,4 +1,8 @@
-<h1>Tides#index</h1>
-<p>Find me in app/views/tides/index.html.erb</p>
-
-<%= line_chart @daily_data %>
+<div class="container">
+  <h1>Daily Tide</h1>
+  <%= form_for("/", method: "get", :class => "form-inline") do %>
+    <%= label_tag 'selected_date', 'Tide for:'%>
+    <%= select_tag "date", options_for_select(@daily_data_date, @selected_date), onchange: "this.form.submit();"%>
+  <% end %>
+  <%= line_chart JSON.parse @daily_data[0].data %>
+</div>
