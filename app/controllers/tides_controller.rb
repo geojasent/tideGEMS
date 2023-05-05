@@ -11,6 +11,8 @@ class TidesController < ApplicationController
     @tide_data = NoaaSixMinTideByDate.all
     @daily_data = @tide_data.where(date: @selected_date)
     @daily_data_date = @tide_data.pluck(:date)
+    @chart_daily_data = JSON.parse @daily_data[0].data
+
   end
 
   def weekly_tide

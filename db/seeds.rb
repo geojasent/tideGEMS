@@ -9,8 +9,8 @@ require 'rest-client'
 
 def tides_from_noaa
   puts 'Getting tide data'
-  begin_date = '20230507'
-  end_date = '20230508'
+  begin_date = '20230501'
+  end_date = '20230630'
   station_number = '9414290'
   response = RestClient.get("https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?begin_date=#{begin_date}&end_date=#{end_date}&station=#{station_number}&product=predictions&datum=NAVD&time_zone=lst&units=english&format=json")
   parsed_json = JSON.parse(response.body)

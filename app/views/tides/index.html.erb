@@ -4,5 +4,5 @@
     <%= label_tag 'selected_date', 'Tide for:'%>
     <%= select_tag "date", options_for_select(@daily_data_date, @selected_date), onchange: "this.form.submit();"%>
   <% end %>
-  <%= line_chart JSON.parse @daily_data[0].data %>
+  <%= line_chart @chart_daily_data, library: {}%>
 </div>
