@@ -1,1 +1,9 @@
-<h1>Weekly Tide</h1>
+<div class="container">
+  <h1>7 Day Tide</h1>
+  <%= form_for("/", method: "get", :class => "form-inline") do %>
+    <%= label_tag 'selected_date', 'Tide for week of:'%>
+    <%= select_tag "date", options_for_select(@daily_data_date, @selected_date), onchange: "this.form.submit();"%>
+  <% end %>
+  <%# <%= line_chart @tide_sun_arr, library: {legend: 'bottom'} %> %>
+  <%= line_chart @chart_weekly_data, library: {legend: 'bottom'} %>
+</div>
